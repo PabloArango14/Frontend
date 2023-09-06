@@ -102,6 +102,8 @@ nav {
   background: var(--white);
   top: 60px;
   right: 60px;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
 .desktop-menu ul {
@@ -148,6 +150,9 @@ nav {
   }
 
   .navbar-email {
+    display: none;
+  }
+  .desktop-menu {
     display: none;
   }
 }
