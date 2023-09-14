@@ -11,8 +11,14 @@ menuCarritoIcon.addEventListener("click", toggleCarritoAside);
 
 function toggleDesktopMenu() {
   const isAsideClosed = aside.classList.contains("inactive");
-  if (!isAsideClosed) aside.classList.add("inactive");
+
+  if (!isAsideClosed) {
+    aside.classList.add("inactive");
+  }
   desktopMenu.classList.toggle("inactive");
+  if (!isDesktopMenuClosed) {
+    desktopMenu.classList.add("inactive");
+  }
 }
 
 function toggleMobileMenu() {
@@ -23,8 +29,12 @@ function toggleMobileMenu() {
 
 function toggleCarritoAside() {
   const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
+  const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
   if (!isMobileMenuClosed) {
     mobileMenu.classList.add("inactive");
   }
   aside.classList.toggle("inactive");
+  if (!isDesktopMenuClosed) {
+    desktopMenu.classList.add("inactive");
+  }
 }
